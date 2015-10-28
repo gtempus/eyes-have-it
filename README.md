@@ -1,2 +1,4 @@
 # eyes-have-it
-Square LED matrices that look 'round (with apologies to Roald Dahl).
+Square LED matrices that look 'round _(with apologies to Roald Dahl)_.
+
+
