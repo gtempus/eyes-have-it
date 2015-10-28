@@ -1,3 +1,7 @@
 objs
 *~
 *.o
+*.elf
+*.hex
+*.map
+
