@@ -73,7 +73,7 @@ int main(void) {
     SPCR |= (1 << MSTR);
     SPCR |= (1 << SPE);
 
-    write_data(0x0B, 0b00000110);
+    write_data(0x0B, 0b00000111);
     write_data(0x0A, 0b00001110);
     write_data(0x0F, 0b00000000);
     write_data(0x0C, 0b00000001);
