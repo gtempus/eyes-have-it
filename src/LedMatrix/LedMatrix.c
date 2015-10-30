@@ -51,6 +51,7 @@ void splash_octocat() {
 }
 
 void bullseye() {
+    clear();
     write_data(0x01, 0b00111100); _delay_ms(70);
     write_data(0x02, 0b01000010); _delay_ms(70);
     write_data(0x03, 0b10011001); _delay_ms(70);
