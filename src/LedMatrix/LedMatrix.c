@@ -162,7 +162,7 @@ int main(void) {
         single_data(0x03, 0b00000011, 0x03, 0b11000000); _delay_ms(3000);
         single_data(0x03, 0b00000011, 0x03, 0b11000000); _delay_ms(75);
 
-        for (i=0; i<58; i++)
+        for (char i=0; i<58; i++)
         {
             write_data(0x04, 0b00000000);
             write_data(0x05, 0b00000000);
