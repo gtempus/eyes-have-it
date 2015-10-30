@@ -151,37 +151,72 @@ int main(void) {
         write_data(0x07, 0b00011000);
         write_data(0x08, 0b00000000); _delay_ms(3000);
 
-        //lower eyebrows
-        single_data(0x01, 0b00000011, 0x01, 0b11000000); _delay_ms(75);
+        //Linda Blair
 
-        single_data(0x01, 0b00111100, 0x01, 0b00111100);
-        single_data(0x02, 0b00000011, 0x02, 0b11000000); _delay_ms(75);
+        write_data(0x04, 0b00110000);
+        write_data(0x05, 0b01001000);
+        write_data(0x06, 0b01001000);
+        write_data(0x07, 0b00110000); _delay_ms(25);
 
-        single_data(0x01, 0b11000000, 0x01, 0b00000011);
-        single_data(0x02, 0b00111100, 0x02, 0b00111100);
-        single_data(0x03, 0b00000011, 0x03, 0b11000000); _delay_ms(3000);
-        single_data(0x03, 0b00000011, 0x03, 0b11000000); _delay_ms(75);
+        write_data(0x04, 0b00110000);
+        write_data(0x05, 0b01001000);
+        write_data(0x06, 0b01001000);
+        write_data(0x07, 0b00110000); _delay_ms(25);
 
-        for (i=0; i<58; i++)
-        {
-            write_data(0x04, 0b00000000);
-            write_data(0x05, 0b00000000);
-            write_data(0x06, 0b00011000);
-            write_data(0x07, 0b00000000);
-            write_data(0x08, 0b00000000); _delay_ms(50);
+        write_data(0x04, 0b01100000);
+        write_data(0x05, 0b10010000);
+        write_data(0x06, 0b10010000);
+        write_data(0x07, 0b01100000); _delay_ms(25);
 
-            write_data(0x04, 0b00011000);
-            write_data(0x05, 0b00100100);
-            write_data(0x06, 0b00100100);
-            write_data(0x07, 0b00011000);
-            write_data(0x08, 0b00000000); _delay_ms(50);
+        write_data(0x04, 0b11000000);
+        write_data(0x05, 0b00100000);
+        write_data(0x06, 0b00100000);
+        write_data(0x07, 0b11000000); _delay_ms(25);
 
-            write_data(0x04, 0b00111100);
-            write_data(0x05, 0b01000010);
-            write_data(0x06, 0b01000010);
-            write_data(0x07, 0b00111100);
-            write_data(0x08, 0b00000000); _delay_ms(50);
-        }
+        write_data(0x04, 0b10000000);
+        write_data(0x05, 0b01000000);
+        write_data(0x06, 0b01000000);
+        write_data(0x07, 0b10000000); _delay_ms(25);
+
+        write_data(0x04, 0b00000000);
+        write_data(0x05, 0b10000000);
+        write_data(0x06, 0b10000000);
+        write_data(0x07, 0b00000000); _delay_ms(25);
+
+        write_data(0x04, 0b00000000);
+        write_data(0x05, 0b00000000);
+        write_data(0x06, 0b00000000);
+        write_data(0x07, 0b00000000); _delay_ms(75);
+
+        write_data(0x04, 0b00000000);
+        write_data(0x05, 0b00000001);
+        write_data(0x06, 0b00000001);
+        write_data(0x07, 0b00000000); _delay_ms(25);
+
+        write_data(0x04, 0b00000001);
+        write_data(0x05, 0b00000010);
+        write_data(0x06, 0b00000010);
+        write_data(0x07, 0b00000001); _delay_ms(25);
+
+        write_data(0x04, 0b00000011);
+        write_data(0x05, 0b00000100);
+        write_data(0x06, 0b00000100);
+        write_data(0x07, 0b00000011); _delay_ms(25);
+
+        write_data(0x04, 0b00000110);
+        write_data(0x05, 0b00001001);
+        write_data(0x06, 0b00001001);
+        write_data(0x07, 0b00000110); _delay_ms(25);
+
+        write_data(0x04, 0b00001100);
+        write_data(0x05, 0b00010010);
+        write_data(0x06, 0b00010010);
+        write_data(0x07, 0b00001100); _delay_ms(25);
+
+        write_data(0x04, 0b00011000);
+        write_data(0x05, 0b00100100);
+        write_data(0x06, 0b00100100);
+        write_data(0x07, 0b00011000); _delay_ms(2000);
 
         
         for(char i = 15; i > 0; i--)
