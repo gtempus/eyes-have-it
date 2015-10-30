@@ -50,6 +50,18 @@ void splash_octocat() {
     _delay_ms(3000);        
 }
 
+void splash_octocat() {
+    write_data(0x01, 0b00100100); _delay_ms(70);
+    write_data(0x02, 0b01111110); _delay_ms(70);
+    write_data(0x03, 0b01111110); _delay_ms(70);
+    write_data(0x04, 0b00111100); _delay_ms(70);
+    write_data(0x05, 0b10011000); _delay_ms(70);
+    write_data(0x06, 0b01111000); _delay_ms(70);
+    write_data(0x07, 0b00011000); _delay_ms(70);
+    write_data(0x08, 0b00000000);
+    _delay_ms(3000);        
+}
+
 void clear() {
     write_data(0x01, 0b00000000);
     write_data(0x02, 0b00000000);
@@ -59,6 +71,43 @@ void clear() {
     write_data(0x06, 0b00000000);
     write_data(0x07, 0b00000000);
     write_data(0x08, 0b00000000);
+}
+
+void emoji() {
+        clear(); _delay_ms(3000);
+        
+        write_data(0x0A, 0b00011000);    
+        write_data(0x03, 0b00011000); _delay_ms(70);
+        write_data(0x04, 0b00100100); _delay_ms(70);
+        write_data(0x05, 0b01000010); _delay_ms(3000);
+    
+        write_data(0x03, 0b00000000); _delay_ms(70);
+        write_data(0x04, 0b00111100); _delay_ms(200);
+           
+        write_data(0x04, 0b00000000); _delay_ms(70);
+        write_data(0x05, 0b01111110); _delay_ms(1500);
+           
+        write_data(0x04, 0b00111100); _delay_ms(70);
+        write_data(0x05, 0b01000010); _delay_ms(200); 
+
+        write_data(0x03, 0b00011000); _delay_ms(70);
+        write_data(0x04, 0b00100100); _delay_ms(70);
+        write_data(0x05, 0b01000010); _delay_ms(3000); 
+
+        write_data(0x03, 0b00000000); _delay_ms(70);
+        write_data(0x04, 0b00111100); _delay_ms(200); 
+
+        write_data(0x04, 0b00000000); _delay_ms(70);
+        write_data(0x05, 0b01111110); _delay_ms(200);
+        
+        write_data(0x04, 0b00111100); _delay_ms(70);
+        write_data(0x05, 0b01000010); _delay_ms(200); 
+
+        write_data(0x03, 0b00011000); _delay_ms(70);
+        write_data(0x04, 0b00100100); _delay_ms(70);
+        write_data(0x05, 0b01000010); _delay_ms(3000); 
+
+        clear(); _delay_ms(3000);
 }
 
 int main(void) {
@@ -86,6 +135,8 @@ int main(void) {
         
         write_data(0x0A, 0b00000011);    
         write_data(0x08, 0b00011000); _delay_ms(100);
+
+        emoji();
 
         write_data(0x0A, 0b00000110);    
         write_data(0x07, 0b00011000);
