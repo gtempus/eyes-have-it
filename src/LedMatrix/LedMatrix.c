@@ -51,7 +51,6 @@ void splash_octocat() {
 }
 
 void bullseye() {
-    clear();
     write_data(0x01, 0b00111100); _delay_ms(70);
     write_data(0x02, 0b01000010); _delay_ms(70);
     write_data(0x03, 0b10011001); _delay_ms(70);
@@ -60,6 +59,7 @@ void bullseye() {
     write_data(0x06, 0b10011001); _delay_ms(70);
     write_data(0x07, 0b01000010); _delay_ms(70);
     write_data(0x08, 0b00111100); _delay_ms(3000);
+    clear();
 }
 
 void clear() {
@@ -92,12 +92,13 @@ int main(void) {
 
     clear();
     splash_octocat();
-    bullseye();
 
     while(1) {
         clear(); _delay_ms(3000);
-        
         write_data(0x0A, 0b00000011);    
+
+        bullseye();
+        
         write_data(0x08, 0b00011000); _delay_ms(100);
 
         write_data(0x0A, 0b00000110);    
