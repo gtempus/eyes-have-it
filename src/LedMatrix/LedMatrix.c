@@ -160,7 +160,30 @@ int main(void) {
         single_data(0x01, 0b11000000, 0x01, 0b00000011);
         single_data(0x02, 0b00111100, 0x02, 0b00111100);
         single_data(0x03, 0b00000011, 0x03, 0b11000000); _delay_ms(3000);
+        single_data(0x03, 0b00000011, 0x03, 0b11000000); _delay_ms(75);
 
+        for (char i=0; i<58; i++)
+        {
+            write_data(0x04, 0b00000000);
+            write_data(0x05, 0b00000000);
+            write_data(0x06, 0b00011000);
+            write_data(0x07, 0b00000000);
+            write_data(0x08, 0b00000000); _delay_ms(50);
+
+            write_data(0x04, 0b00011000);
+            write_data(0x05, 0b00100100);
+            write_data(0x06, 0b00100100);
+            write_data(0x07, 0b00011000);
+            write_data(0x08, 0b00000000); _delay_ms(50);
+
+            write_data(0x04, 0b00111100);
+            write_data(0x05, 0b01000010);
+            write_data(0x06, 0b01000010);
+            write_data(0x07, 0b00111100);
+            write_data(0x08, 0b00000000); _delay_ms(50);
+        }
+
+        
         for(char i = 15; i > 0; i--)
         {
             write_data(0x0A,i); _delay_ms(30);
