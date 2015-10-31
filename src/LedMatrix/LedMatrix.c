@@ -5,6 +5,8 @@
 #define SLAVE_SELECT SPI_SS_PORT &= ~(1<<SPI_SS)
 #define SLAVE_DESELECT SPI_SS_PORT |= (1<<SPI_SS)
 
+// Really nothing
+
 void write_data(char the_register, char data) {
     SLAVE_SELECT;
     //right eye
