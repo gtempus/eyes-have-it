@@ -11,3 +11,6 @@ Hardware list (major parts):
 * Atmel ATMega168 AVR
 * 2 Maxim MAX7219 Display Drivers
 * 2 Luckylight 3mm 8x8 Dot Matrix LED Displays
+
+
+_CarolinaWren's thoughts on the matter: Personally I think it's a little creepy and I don't want to stare at it for too long. Definitely keep it out of our room!_
